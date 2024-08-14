@@ -21,6 +21,17 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+  // Auckland
+  let aucklandElement = document.querySelector("#auckland");
+  if (aucklandElement) {
+    let aucklandDateElement = aucklandElement.querySelector(".date");
+    let aucklandTimeElement = aucklandElement.querySelector(".time");
+    let aucklandTime = moment().tz("Pacific/Auckland");
+    aucklandDateElement.innerHTML = aucklandTime.format("MMMM Do YYYY");
+    aucklandTimeElement.innerHTML = aucklandTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 updateTime();
@@ -46,7 +57,8 @@ function updateCity(event) {
                     ${cityTime.format("h:mm:ss")} 
                     <small>${cityTime.format("A")}</small>
                 </div>
-            </div>`;
+            </div>
+            <div><a href="/">Back to city list</a></div>`;
 }
 
 let citiesSelectElement = document.querySelector("#city");
