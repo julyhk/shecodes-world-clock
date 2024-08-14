@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SheCodes Project - World Clock</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="src/moment.js"></script>
+    <script src="src/moment-timezone-with-data-1970-2030.js"></script>
 </head>
 
 <body>
@@ -17,19 +19,19 @@
             <option value="newyork">New York</option>
             <option value="auckland">Auckland</option>
         </select>
-        <div class="city">
+        <div class="city" id="los-angeles">
+            <div>
+                <h2>Los Angeles 🇺🇸</h2>
+                <div class="date"></div>
+            </div>
+            <div class="time"></div>
+        </div>
+        <div class="city" id="paris">
             <div>
                 <h2>Paris 🇫🇷</h2>
-                <div class="date">August 15th 2022</div>
+                <div class="date"></div>
             </div>
-            <div class="time">1:48:15 <small>AM</small></div>
-        </div>
-        <div class="city">
-            <div>
-                <h2>Sydney 🇦🇺</h2>
-                <div class="date">August 15th 2022</div>
-            </div>
-            <div class="time">1:48:15 <small>AM</small></div>
+            <div class="time"></div>
         </div>
     </div>
     <footer>
